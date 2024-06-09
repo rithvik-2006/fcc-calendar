@@ -1,0 +1,245 @@
+ #root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+
+
+.react-calendar {
+  background-color: white;
+  width: 50vh; /* Adjust width as needed */
+  margin: auto; /* Center the calendar horizontally */
+  border-radius: 10px; /* Rounded corners for the calendar */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  overflow: hidden; /* Ensure content doesn't overflow rounded corners */
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  /* Ensure consistent font */
+  
+}
+
+.date {
+  margin-top: 20vh;
+  font-size: 18px;
+  color: #007bff;
+  text-align: center;
+}
+
+/* Calendar header styling */
+.react-calendar__navigation {
+  background-color: #f8f9fa; /* Light background color */
+  border-bottom: 1px solid #e9ecef; /* Light border */
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color:#000000;
+}
+
+.react-calendar__navigation button {
+  border: none;
+  background: none;
+  padding: 5px;
+  cursor: pointer;
+  color: #000000;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.react-calendar__navigation button:hover {
+  color: #007bff; /* Subtle hover color */
+}
+
+.react-calendar__navigation__label {
+  font-weight: bold;
+  color: #495057;
+  font-size: 1.2em;
+
+}
+
+/* Day styling */
+.react-calendar__month-view__days {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px;
+ 
+}
+
+.react-calendar__month-view__days button {
+  border: none;
+  padding: 10px;
+  margin: 5px;
+  text-align: center;
+  cursor: pointer;
+  font-size: 14px;
+  border-radius: 4px; /* Add subtle rounding */
+  background-color: #fff; /* Ensure background color */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transitions */
+  color:#000000;
+
+}
+
+.react-calendar__month-view__days button:hover {
+  background-color: #272829; /* Subtle hover effect */
+}
+
+/* Selected day styling */
+.react-calendar__tile--active {
+  background-color: #007bff; /* Adjust selected day color */
+  color: #fff; /* Light text for selected day */
+}
+
+/* Weekday styling */
+.react-calendar__month-view__weekdays {
+  display: flex; /* Display weekdays as a bar */
+  justify-content: space-between;
+  padding: 5px;
+  font-size: 12px;
+  color: #868e96; /* Light gray for weekdays */
+  background-color: #f8f9fa; /* Match header background color */
+  border-bottom: 1px solid #e9ecef; /* Light border */
+}
+
+.react-calendar__month-view__weekdays div {
+  text-align: center; /* Center weekday labels */
+  flex: 1; /* Ensure equal spacing */
+}
+
+/* Year view styling */
+.react-calendar__year-view__months {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 10px;
+}
+
+.react-calendar__year-view__months__month {
+  width: 30%; /* Adjust width as needed */
+  margin: 10px 0;
+  background-color: white;
+  color: #000000;
+  padding: 10px;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.react-calendar__year-view__months__month:hover {
+  border:none;
+  background-color: #007bff;
+  color:white /* Subtle hover effect */
+}
+
+/* Adjusted month view styles for better appearance */
+.react-calendar__month-view {
+  width: 350px; /* Adjust width as needed */
+  margin: auto; /* Center the calendar horizontally */
+}
+
+/* Calendar header styling for month view */
+.react-calendar__month-view .react-calendar__month-view__header {
+  background-color: #f0f0f0;
+  border-bottom: 1px solid #ccc;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.react-calendar__month-view .react-calendar__month-view__header h2 {
+  font-weight: bold;
+  margin: 0;
+}
+
+.react-calendar__month-view .react-calendar__month-view__header button {
+  border: none;
+  background: none;
+  padding: 5px;
+  cursor: pointer;
+  color: #333;
+  font-size: 16px;
+}
+
+/* Day styling in month view */
+.react-calendar__month-view__days {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px;
+}
+
+.react-calendar__month-view__days button {
+  border: none;
+  padding: 10px;
+  margin: 5px;
+  text-align: center;
+  cursor: pointer;
+  font-size: 14px;
+  border-radius: 4px; /* Add subtle rounding */
+}
+
+.react-calendar__month-view__days button:hover {
+  background-color: #eee; /* Subtle hover effect */
+}
+
+/* Selected day styling in month view */
+.react-calendar__month-view__days button.react-calendar__tile--active {
+  background-color: #0011ff; /* Adjust selected day color */
+  color: #fff; /* Light text for selected day */
+}
+
+/* Weekday styling for month view */
+.react-calendar__month-view__weekdays {
+  display: flex; /* Optional: Display weekdays as a bar */
+  justify-content: space-between;
+  padding: 5px;
+  font-size: 12px;
+  color: #ccc;
+}
+
+.react-calendar__month-view__weekdays div {
+  text-align: center; /* Optional: Center weekday labels */
+}
+
+.react-calendar__decade-view__years__year {
+  width: 30%; /* Adjust width as needed */
+  margin: 10px 0;
+  background-color: white;
+  color: #000000;
+  padding: 10px;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.react-calendar__decade-view__years__year:hover {
+  background-color: #007bff; /* Subtle hover effect */
+  color: white; /* Change text color to white on hover */
+  border:none;
+}
+.react-calendar__century-view__decades {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 10px;
+}
+
+.react-calendar__century-view__decades__decade {
+  width: 30%; /* Adjust width as needed */
+  margin: 10px 0;
+  background-color: white;
+  color: #000000;
+  padding: 10px;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.react-calendar__century-view__decades__decade:hover {
+  background-color: #007bff; /* Subtle hover effect */
+  color: white; /* Change text color to white */
+}
